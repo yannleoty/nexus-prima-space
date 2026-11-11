@@ -61,8 +61,14 @@
     }
     nav a:hover { color: var(--crimson); }
     .hero {
+      /* The image appears only inside the hero, between the two horizontal dividers. */
       padding: clamp(100px, 14vw, 190px) 0 clamp(110px, 14vw, 180px);
       border-bottom: 1px solid var(--divider);
+      background-color: #000;
+      background-image: linear-gradient(90deg, rgba(0,0,0,.35) 0%, rgba(0,0,0,.08) 65%, rgba(0,0,0,0) 100%), url("./earth-horizon.png");
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
     }
     .hero h1 {
       margin: 0;
@@ -123,7 +129,10 @@
       .header-inner { padding: 23px 0; flex-direction: column; align-items: flex-start; gap: 19px; }
       nav { gap: 12px 18px; }
       nav a { font-size: .74rem; }
-      .hero { padding: 110px 0 120px; }
+      .hero {
+        padding: 110px 0 120px;
+        background-position: 65% center;
+      }
       .hero h1 { font-size: clamp(3.1rem, 13vw, 5rem); }
       .subtitle { margin-top: 24px; }
       .section-grid { grid-template-columns: 1fr; gap: 28px; }
