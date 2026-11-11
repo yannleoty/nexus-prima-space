@@ -44,7 +44,7 @@
       gap: 28px;
     }
     .wordmark {
-      color: var(--crimson);
+      color: var(--text);
       font-weight: 800;
       font-size: .91rem;
       text-transform: uppercase;
@@ -70,9 +70,10 @@
       background-position: center center;
       background-repeat: no-repeat;
     }
+    .brand-prima { color: var(--crimson); }
     .hero h1 {
       margin: 0;
-      color: var(--crimson);
+      color: var(--text);
       font-size: clamp(3.4rem, 9vw, 7.4rem);
       font-weight: 780;
       line-height: 1.07;
@@ -149,7 +150,7 @@
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <a class="wordmark" href="#top" aria-label="Nexus Prima Space home">Nexus Prima Space</a>
+      <a class="wordmark" href="#top" aria-label="Nexus Prima Space home">Nexus <span class="brand-prima">Prima</span> Space</a>
       <nav aria-label="Main navigation">
         <a href="#mission">Mission</a>
         <a href="#phases">Phases</a>
@@ -162,7 +163,7 @@
   <main id="top">
     <section class="hero" aria-labelledby="hero-title">
       <div class="container">
-        <h1 id="hero-title">Nexus Prima Space</h1>
+        <h1 id="hero-title">Nexus <span class="brand-prima">Prima</span> Space</h1>
         <p class="subtitle">For Earth And Beyond.</p>
       </div>
     </section>
@@ -170,7 +171,7 @@
       <div class="container section-grid">
         <h2 class="section-title" id="mission-title"><span class="number">01</span>Mission</h2>
         <div class="section-body">
-          <p>Nexus Prima Space is a space technology company dedicated to developing autonomous robotics, extraterrestrial resource production and the industrial infrastructure required for a sustainable interplanetary civilisation.</p>
+          <p>Nexus <span class="brand-prima">Prima</span> Space is a space technology company dedicated to developing autonomous robotics, extraterrestrial resource production and the industrial infrastructure required for a sustainable interplanetary civilisation.</p>
           <p>Our ambition is to make essential infrastructure increasingly autonomous, economically viable and capable of operating beyond Earth.</p>
           <p>Beginning with technologies applicable to industrial operations on Earth, we aim to progressively develop the capabilities required to construct, operate and sustain infrastructure on the Moon, asteroids and Mars.</p>
           <p>Our long-term objective is to help humanity build an independent, productive and sustainable economy beyond Earth.</p>
@@ -227,7 +228,7 @@
   </main>
   <footer class="site-footer">
     <div class="container footer-inner">
-      <span>© <span id="year">2026</span> Nexus Prima Space</span>
+      <span>© <span id="year">2026</span> Nexus <span class="brand-prima">Prima</span> Space</span>
       <a href="https://nexusprima.org/" target="_blank" rel="noopener noreferrer">Nexus Prima</a>
     </div>
   </footer>
