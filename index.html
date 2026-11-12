@@ -228,6 +228,70 @@
   font-size: .8rem;
   letter-spacing: .04em;
 }
+    
+/* ARS1 — Product presentation */
+
+.product-layout {
+  align-items: center;
+  row-gap: 36px;
+}
+
+.product-heading {
+  grid-column: 1;
+  min-width: 0;
+}
+
+.product-heading .product-name {
+  margin: 32px 0 0;
+}
+
+.product-visual {
+  grid-column: 2;
+  margin: 0;
+  min-width: 0;
+}
+
+.product-visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.product-details {
+  grid-column: 2;
+}
+
+/* Mobile — image beside the product title */
+
+@media (max-width: 760px) {
+  .product-layout {
+    grid-template-columns: minmax(0, 40%) minmax(0, 1fr);
+    column-gap: 16px;
+    row-gap: 28px;
+  }
+
+  .product-heading {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .product-heading .product-name {
+    margin-top: 30px;
+    font-size: clamp(2.3rem, 9vw, 3.5rem);
+  }
+
+  .product-visual {
+    grid-column: 2;
+    grid-row: 1;
+    align-self: center;
+  }
+
+  .product-details {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+}
+
   </style>
 </head>
 <body>
@@ -280,22 +344,62 @@
         </div>
       </div>
     </section>
-    <section class="section" id="product" aria-labelledby="product-title">
-      <div class="container section-grid">
-        <h2 class="section-title" id="product-title"><span class="number">03</span>Product</h2>
-        <div class="section-body">
-          <h3 class="product-name">ARS1</h3>
-          <p><p>ARS1 (Autonomous Robot Systems — Product 1) is our first project.</p></p>
-          <p>ARS1 is being developed to inspect, monitor and maintain both solar-power and industrial infrastructure, reducing the cost, complexity and risk of operations in demanding environments.</p>
-          <ol class="capabilities">
-            <li><span class="cap-number">01</span>Autonomous Inspection</li>
-            <li><span class="cap-number">02</span>Fault Detection</li>
-            <li><span class="cap-number">03</span>Infrastructure Monitoring</li>
-            <li><span class="cap-number">04</span>Maintenance Support</li>
-          </ol>
-        </div>
-      </div>
-    </section>
+    
+<section class="section" id="product" aria-labelledby="product-title">
+  <div class="container section-grid product-layout">
+
+    <div class="product-heading">
+      <h2 class="section-title" id="product-title">
+        <span class="number">03</span>Product
+      </h2>
+
+      <h3 class="product-name">ARS1</h3>
+    </div>
+
+    <figure class="product-visual">
+      <img
+        src="./ars1.jpg"
+        alt="ARS1 autonomous industrial inspection robot concept"
+        width="1536"
+        height="864"
+        loading="lazy"
+        decoding="async"
+      >
+    </figure>
+
+    <div class="section-body product-details">
+
+      <p>ARS1 (Autonomous Robot Systems — Product 1) is our first project.</p>
+
+      <p>ARS1 is being developed to inspect, monitor and maintain both solar-power and industrial infrastructure, reducing the cost, complexity and risk of operations in demanding environments.</p>
+
+      <ol class="capabilities">
+        <li>
+          <span class="cap-number">01</span>
+          Autonomous Inspection
+        </li>
+
+        <li>
+          <span class="cap-number">02</span>
+          Fault Detection
+        </li>
+
+        <li>
+          <span class="cap-number">03</span>
+          Infrastructure Monitoring
+        </li>
+
+        <li>
+          <span class="cap-number">04</span>
+          Maintenance Support
+        </li>
+      </ol>
+
+    </div>
+
+  </div>
+</section>
+
     <section class="section" id="vision" aria-labelledby="vision-title">
       <div class="container section-grid">
         <h2 class="section-title" id="vision-title"><span class="number">04</span>Vision</h2>
