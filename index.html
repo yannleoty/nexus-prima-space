@@ -292,6 +292,16 @@
   }
 }
 
+/* ARS1 — Vertical product image */
+
+.product-inline-image {
+  display: block;
+  width: 100%;
+  max-width: 360px;
+  height: auto;
+  margin: 32px auto;
+}
+
   </style>
 </head>
 <body>
@@ -345,31 +355,29 @@
       </div>
     </section>
     
-<section class="section" id="product" aria-labelledby="product-title">
-  <div class="container section-grid product-layout">
 
-    <div class="product-heading">
-      <h2 class="section-title" id="product-title">
-        <span class="number">03</span>Product
-      </h2>
+<section class="section" id="product" aria-labelledby="product-title">
+  <div class="container section-grid">
+
+    <h2 class="section-title" id="product-title">
+      <span class="number">03</span>Product
+    </h2>
+
+    <div class="section-body">
 
       <h3 class="product-name">ARS1</h3>
-    </div>
 
-    <figure class="product-visual">
+      <p>ARS1 (Autonomous Robot Systems — Product 1) is our first project.</p>
+
       <img
-        src="./ars1.jpg"
+        class="product-inline-image"
+        src="./ars1-portrait.jpg"
         alt="ARS1 autonomous industrial inspection robot concept"
-        width="1536"
-        height="864"
+        width="1024"
+        height="1536"
         loading="lazy"
         decoding="async"
       >
-    </figure>
-
-    <div class="section-body product-details">
-
-      <p>ARS1 (Autonomous Robot Systems — Product 1) is our first project.</p>
 
       <p>ARS1 is being developed to inspect, monitor and maintain both solar-power and industrial infrastructure, reducing the cost, complexity and risk of operations in demanding environments.</p>
 
@@ -396,9 +404,9 @@
       </ol>
 
     </div>
-
   </div>
 </section>
+
 
     <section class="section" id="vision" aria-labelledby="vision-title">
       <div class="container section-grid">
