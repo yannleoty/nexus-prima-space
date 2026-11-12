@@ -306,13 +306,27 @@
   margin: 0 auto 34px;
 }
 
+
+/* Remove the divider above ARS1 */
+#phases {
+  border-bottom: 0;
+}
+
+/* Reduce empty space above the image */
+#product {
+  padding-top: 40px;
+}
+
+/* ARS1 — Edge-to-edge image on mobile */
 @media (max-width: 760px) {
   .product-inline-image {
     max-width: none;
-    width: calc(100% + 24px);
-    margin: 0 -12px 34px;
+    width: calc(100% + 40px);
+    height: auto;
+    margin: 0 -20px 34px;
   }
 }
+
 
   </style>
 </head>
