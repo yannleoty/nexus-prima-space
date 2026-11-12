@@ -190,7 +190,26 @@
       .capabilities li { padding: 13px 0; }
     }
     @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
-  </style>
+ 
+/* Investors — centered Moon, no filters */
+#investors {
+  display: block;
+  min-height: 0;
+  padding: calc(min(100vw, 540px) * 1.24 + 48px) 0 110px;
+  background: #000 url("./investors-moon.jpg")
+    center 24px / min(100%, 540px) auto no-repeat;
+}
+
+#investors::before,
+#investors::after {
+  content: none;
+}
+
+#investors > .container {
+  position: relative;
+  z-index: 1;
+}
+ </style>
 </head>
 <body>
   <header class="site-header">
