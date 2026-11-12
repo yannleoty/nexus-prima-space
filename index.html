@@ -395,6 +395,38 @@
   }
 }
 
+/* PHASE 02 — Asteroid resource extraction */
+
+.phase-02-image {
+  width: 100%;
+  overflow: hidden;
+}
+
+.phase-02-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Desktop — cinematic full-width presentation */
+
+@media (min-width: 761px) {
+  .phase-02-image img {
+    height: min(100vw, 1400px);
+    object-fit: cover;
+    object-position: center 48%;
+  }
+}
+
+/* Mobile — complete vertical composition */
+
+@media (max-width: 760px) {
+  .phase-02-image img {
+    width: 100%;
+    height: auto;
+  }
+}
+
   </style>
 </head>
 <body>
@@ -476,6 +508,7 @@
     >
   </div>
 
+  
   <div class="container section-grid">
     <div class="section-body phases-content">
 
@@ -487,6 +520,25 @@
         <p>Develop robotic systems for useful industrial work with an emphasis on coordinated and resilient autonomous operations.</p>
       </article>
 
+    </div>
+  </div>
+
+  <!-- PHASE 02 — Extraterrestrial Resource Production -->
+
+  <div class="phase-image phase-02-image">
+    <img
+      src="./phase-02-extractor.jpg"
+      alt="Nexus Prima Space concept of an autonomous spacecraft extracting and collecting resources from an asteroid"
+      width="864"
+      height="1536"
+      loading="lazy"
+      decoding="async"
+    >
+  </div>
+
+  <div class="container section-grid">
+    <div class="section-body phases-content">
+
       <article class="phase">
         <h3>
           <span class="phase-label">PHASE 02</span> · Extraterrestrial Resource Production
@@ -495,7 +547,6 @@
         <p>Progress toward technologies extracting and processing resources beyond Earth.</p>
       </article>
 
-      
     </div>
   </div>
 
