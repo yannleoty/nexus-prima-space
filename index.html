@@ -293,13 +293,25 @@
 }
 
 /* ARS1 — Vertical product image */
+.product-body {
+  max-width: 760px;
+  margin: 0 auto;
+}
 
 .product-inline-image {
   display: block;
   width: 100%;
-  max-width: 360px;
+  max-width: 520px;
   height: auto;
-  margin: 32px auto;
+  margin: 0 auto 34px;
+}
+
+@media (max-width: 760px) {
+  .product-inline-image {
+    max-width: none;
+    width: calc(100% + 24px);
+    margin: 0 -12px 34px;
+  }
 }
 
   </style>
@@ -357,17 +369,8 @@
     
 
 <section class="section" id="product" aria-labelledby="product-title">
-  <div class="container section-grid">
-
-    <h2 class="section-title" id="product-title">
-      <span class="number">03</span>Product
-    </h2>
-
-    <div class="section-body">
-
-      <h3 class="product-name">ARS1</h3>
-
-      <p>ARS1 (Autonomous Robot Systems — Product 1) is our first project.</p>
+  <div class="container">
+    <div class="section-body product-body">
 
       <img
         class="product-inline-image"
@@ -378,6 +381,14 @@
         loading="lazy"
         decoding="async"
       >
+
+      <h2 class="section-title" id="product-title">
+        <span class="number">03</span>Product
+      </h2>
+
+      <h3 class="product-name">ARS1</h3>
+
+      <p>ARS1 (Autonomous Robot Systems — Product 1) is our first project.</p>
 
       <p>ARS1 is being developed to inspect, monitor and maintain both solar-power and industrial infrastructure, reducing the cost, complexity and risk of operations in demanding environments.</p>
 
