@@ -328,6 +328,34 @@
 }
 
 
+/* Phases — Lunar operations image */
+
+#mission {
+  border-bottom: 0;
+}
+
+#phases {
+  padding-top: 40px;
+}
+
+.phases-image {
+  display: block;
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  margin: 0 auto 34px;
+}
+
+/* Edge-to-edge image on mobile */
+
+@media (max-width: 760px) {
+  .phases-image {
+    width: 100%;
+    max-width: none;
+    margin: 0 0 34px;
+  }
+}
+
   </style>
 </head>
 <body>
@@ -362,7 +390,17 @@
       </div>
     </section>
     <section class="section" id="phases" aria-labelledby="phases-title">
-      <div class="container section-grid">
+  
+<img
+  class="phases-image"
+  src="./phases-moon.jpg"
+  alt="Concept of ARS1 and autonomous industrial robotic systems operating on the Moon"
+  width="864"
+  height="1536"
+  loading="lazy"
+  decoding="async"
+>
+    <div class="container section-grid">
         <h2 class="section-title" id="phases-title"><span class="number">02</span>Phases</h2>
         <div class="section-body">
           <article class="phase">
