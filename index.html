@@ -317,14 +317,12 @@
   padding-top: 40px;
 }
 
-/* Phase images — full width */
+
+/* Phase images — edge-to-edge */
+
 .phase-image {
-  width: 100vw;
-  max-width: none;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
-  margin-top: 28px;
-  margin-bottom: 36px;
+  width: 100%;
+  margin: 28px 0 36px;
   overflow: hidden;
 }
 
@@ -332,26 +330,32 @@
   display: block;
   width: 100%;
   height: auto;
-  border: 0;
-  border-radius: 0;
+}
+
+.phases-content {
+  grid-column: 2;
 }
 
 /* Desktop */
-@media (min-width: 768px) {
+@media (min-width: 761px) {
   .phase-image img {
-    max-height: 850px;
+    height: min(75vw, 850px);
     object-fit: cover;
-    object-position: center 75%;
+    object-position: center 85%;
   }
 }
 
 /* Mobile */
-@media (max-width: 767px) {
+@media (max-width: 760px) {
   .phase-image {
-    margin-top: 24px;
-    margin-bottom: 30px;
+    margin: 24px 0 30px;
+  }
+
+  .phases-content {
+    grid-column: 1;
   }
 }
+
 /* ARS1 — Edge-to-edge image on mobile */
 @media (max-width: 760px) {
   .product-inline-image {
@@ -413,10 +417,28 @@
         <p class="subtitle">For Earth And Beyond.</p>
       </div>
     </section>
-    <section class="section" id="mission" aria-labelledby="mission-title">
-      <div class="container section-grid">
-        <h2 class="section-title" id="mission-title"><span class="number">01</span>Mission</h2>
-        <div class="section-body">
+    
+<div class="container">
+  <h2 class="section-title" id="phases-title">
+    <span class="number">02</span>Phases
+  </h2>
+</div>
+
+<!-- ARS1 — Phase 01 image -->
+<div class="phase-image">
+  <img
+    src="./phase-01-ars1.jpg"
+    alt="Concept of ARS1 inspecting solar energy infrastructure on Earth"
+    width="864"
+    height="1536"
+    loading="lazy"
+    decoding="async"
+  >
+</div>
+
+<div class="container section-grid">
+  <div class="section-body phases-content">
+
           <p>Nexus <span class="brand-prima">Prima</span> Space is a space technology company dedicated to developing autonomous robotics, extraterrestrial resource production and the industrial infrastructure required for a sustainable interplanetary civilisation.</p>
           <p>Our ambition is to make essential infrastructure increasingly autonomous, economically viable and capable of operating beyond Earth.</p>
           <p>Beginning with technologies applicable to industrial operations on Earth, we aim to progressively develop the capabilities required to construct, operate and sustain infrastructure on the Moon, asteroids and Mars.</p>
