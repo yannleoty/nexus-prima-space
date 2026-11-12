@@ -127,12 +127,51 @@
     .capabilities li { padding: 16px 0; border-top: 1px solid var(--divider); font-size: 1.02rem; display: flex; align-items: baseline; gap: 18px; }
     .capabilities .cap-number { color: var(--crimson); font-weight: 750; font-size: .84rem; }
     .vision-statement { font-size: clamp(1.3rem, 2.8vw, 2rem) !important; line-height: 1.55 !important; }
+    /* Investors: the user's Moon portrait is a subtle background, not a content image. */
+    #investors {
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+      min-height: 610px;
+      display: flex;
+      align-items: center;
+      background-color: #000;
+    }
+    #investors::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+      pointer-events: none;
+      background: url("./investors-moon.jpg") left 2% top 0 / auto 128% no-repeat;
+      opacity: .75;
+    }
+    #investors::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      background: linear-gradient(90deg, rgba(0,0,0,.48) 0%, rgba(0,0,0,.65) 31%, #000 78%);
+    }
+    #investors > .container { position: relative; z-index: 1; }
     .site-footer { padding: 36px 0 50px; }
     .footer-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px; font-size: .82rem; }
     .footer-inner a { color: #fff; }
     .footer-inner a:hover { color: var(--crimson); }
     @media (max-width: 760px) {
       .container { width: calc(100% - 40px); }
+      /* On phones, show the Moon near the top and fade to black behind the copy. */
+      #investors { min-height: 610px; align-items: flex-end; }
+      #investors::before {
+        background-size: auto 120%;
+        background-position: right -55px top 0;
+        opacity: .56;
+      }
+      #investors::after {
+        background: linear-gradient(180deg, rgba(0,0,0,.1) 0%, rgba(0,0,0,.64) 43%, #000 88%);
+      }
+
       .header-inner { padding: 23px 0; flex-direction: column; align-items: flex-start; gap: 19px; }
       nav { gap: 12px 18px; }
       nav a { font-size: .74rem; }
