@@ -316,7 +316,46 @@
 #product {
   padding-top: 40px;
 }
+/* Reduce empty space above the image */
+#product {
+  padding-top: 40px;
+}
 
+/* Phase images — full width */
+.phase-image {
+  width: 100vw;
+  max-width: none;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  margin-top: 28px;
+  margin-bottom: 36px;
+  overflow: hidden;
+}
+
+.phase-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 0;
+  border-radius: 0;
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+  .phase-image img {
+    max-height: 850px;
+    object-fit: cover;
+    object-position: center 75%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .phase-image {
+    margin-top: 24px;
+    margin-bottom: 30px;
+  }
+}
 /* ARS1 — Edge-to-edge image on mobile */
 @media (max-width: 760px) {
   .product-inline-image {
